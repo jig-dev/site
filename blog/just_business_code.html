@@ -1,0 +1,95 @@
+<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../mvp.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jig</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div style="display: inline">
+                <!--<span style="font-family: Montserrat; font-weight: 900; font-size: 1.5em; color:#111827; vertical-align: super">;:,</span>-->
+                <img src="../favicon.svg" width="32" height="32" style="margin: 0 3px; vertical-align: text-bottom;">
+                <span style="font-family: Montserrat; font-weight: 900; font-size: 2em; color:#111827;">JIG</span>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#faq">FAQ</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Just-business-code</h2>
+            <h5>By Etienne de Boursetty, January 18th 2021.<br>Disclaimer: this post is part of a content marketing campaign for <a href="../index.html">JIG</a>.</h5>
+<p>No-code tools aim at turning anyone into an app developer. This sounds great. If you could cut the engineer out of the app-making process, not only would you save the money that the engineer is being paid, but you would also save countless hours of conversation and development iterations as engineers seldom grasp what is required of them right away. The promise of these tools is: business users know best what they need, so why not give them the means to build it themselves?</p>
+<p>While the promise is appealing, I think that the no-code approach is fundamentally flawed and that these tools can't fix the problem they set out to solve.</p> 
+
+<h3>1. There is no escaping complexity</h3>
+
+<p>One of the classic ways that no-code tools demo their functionalities is to show how to create a to-do app within their framework in less than 5 minutes. The outcome is dead simple: a text box and a button to add a task, a list of tasks, and for each task a button to mark it as complete. Most tools will automatically sync the content of the app with a database. Some will include a way to authenticate the users, as well as an automatic deployment mechanism to serve the app to the world in one click. Obviously the same application written from scratch using a standard web stack would take at the very minimum a couple of hours to put online, making the no-code approach on this example an awful lot faster.</p>
+
+<p>Unfortunately business apps are all about productivity for the specific users. If it’s built in-house, it should be 100% customizable. Once the todo app is in front of users, requests will start to pour in:</p>
+
+<p>- Hey, can you color in red the todos that start with an exclamation mark?</p>
+
+<p>Sure! But uh oh, where do we put that condition? Surely there’s a button somewhere for that?</p>
+
+<h3>2. Code in disguise</h3>
+
+<p>Fundamentally, what the no-code tools offer is to hide the program that gets executed behind a wall of UI. But in the end, the actual logic is still there.</p>
+
+<p>A “Table” component that reads data from a datasource implements some form of for loop. “Rules” that are applied to formatting translate to if statements. “Integrations with other services” perform requests between inputs and outputs. Ultimately, no-code tools merely replace text-based programming with click-based programming.</p>
+
+<p>All this is made to shield the user from touching anything that looks like code, while still trying to allow the user to build apps that are inherently complex. But in the process, all the freedoms that a general programming language offer are stripped from the user. Everything needs to be pre-thought by the creator of the tool. Something as simple as "if operation1 succeeds, do operation2, otherwise alert the user" needs its own widget. Statements like "do operation1 every 5 minutes unless button x is clicked" require a mixture of "triggers", "schedules", and "rules", all of which need to have been carefully designed and implemented. Anything that hasn't be pre-baked is basically impossible.</p>
+
+<p>Taking the todo list example above, consider the following request:</p>
+
+<p>- I want to have a tab that shows me the changes in my todo list since last Friday night.</p>
+
+<p>Good luck with that.</p>
+
+<h3>3. But writing code is hard!</h3>
+
+<p>Obviously, I am not advocating for business people to learn React. But am I not vehemently defending the role of the engineer either. Writing applications is hard, but defining the business logic of what an app should be doing is not that complicated.</p>
+
+<p>I believe there is a better approach. In fact, I know there is a better approach. Business people from all over the world have been developing successful applications for years using tools like Excel and Access. People with no particular engineering background have been able to teach themselves some VBA, and wire pieces of code together to build their own apps. My belief is that we can learn from what worked and what didn't in Excel, and use this knowledge to build better app-making tools.</p>
+
+<p>Among the many features that Microsoft developed for Excel, I think that these have had the most impact: </p>
+
+<p>- No separate development environment, everything is in the tool
+<br>- Immediate feedback loop (no compilation)
+<br>- Simple syntax (people are scared of brackets and semi colons)
+<br>- Auto-complete
+<br>- Ability to discover how to do things easily by "recording macros"
+<br>- WYSIWYG user interface (no messy UI library to deal with)
+<br>- Full Extensibility
+<br>- Accommodates users of different "levels"</p>
+
+<p>These features have all played a part in Excel's wide adoption, but overall, I think that what truly set Excel apart, was not that it shielded people from code, but rather that it helped people write just the code they needed. While we do need tools that provide users with as much pre-packaged stuff as possible, we also need to give them the ability to express their needs freely. We don't need no-code tools, we need just-business-code tools.</p>
+
+        </article>
+    </main>
+    <footer>
+        <hr>        
+        <p>
+            <small>Copyright 2020, Etienne de Boursetty.</small>
+            <br>
+            <small>Contact: info@jigdev.com</small>
+        </p>
+    </footer>
+</body>
+
+</html>

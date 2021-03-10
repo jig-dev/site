@@ -26,37 +26,36 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="blog/just_business_code.html">Blog</a></li>
             </ul>
         </nav>
         <h1>A lightweight live programming environment for business apps</h1>
-        <p>Whether you are a small startup or a fortune 500 company, you'll need tools to help drive your business.
-        <br>JIG enables your team to deliver internal apps, reports, dashboards or ad-hoc analyses at warp speed.
-        <br>Just write the code that matters to you, we'll take care of the painful parts.
+        <br>
+        <h3>INTERNAL APPS, REPORTS, DASHBOARDS OR AD-HOC ANALYSES AT WARP SPEED</h3>
+        <div style="display: flex;justify-content: center;">
+            <img style="width:90%; box-shadow: 0px 0px 10px 0px rgb(50 50 50 / 71%);" src="screenshot.png">
+        </div>
+        <div style="display: flex;justify-content: center;">
+        <p>
+            <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.1-beta/JIG-0.0.1-beta.dmg"><b>Download the beta for Mac </b></a>
+            <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.1-beta/JIG-0.0.1-beta.msi"><b>Download the beta for Windows</b></a>
         </p>
-        <p><strong>Right now, JIG is in early beta phase. Many features are still being worked on. See the <a href="#faq">FAQ</a></strong>
-        </p>
-
-        <p><a href="#"><b>Watch demo</i></b><a href="#"><b>Download the beta for Mac &rarr;</b></a><a href="#"><b>Download the beta for Windows &rarr;</b></a></p>
+        </div>
     </header>
     <main>
         <hr>
         <section>
-<!--            <header>
-                <h2>Section Heading</h2>
-                <p>Section Subheading</p>
-            </header>
--->
             <aside>
                 <h3>Productivity first</h3>
                 <p>Fire up JIG and start coding immediately. JIG's live feedback loop makes writing business apps faster than ever before.</p>
             </aside>
             <aside>
-                <h3>UI for non-designers</h3>
+                <h3>Headache-free UI</h3>
                 <p>JIG comes with packaged charts, tables and input components, so that you can focus on your business rather than drowning in html and css.</p>
             </aside>
             <aside>
                 <h3>Flex your data</h3>
-                <p>No-code data tools are simple but stiff. As a full programming environment, JIG can adapt to any special case your business may need.</p>
+                <p>BI data tools are simple but stiff. As a full programming environment, JIG can adapt to any special case your business may need.</p>
             </aside>
             <aside>
                 <h3>Fully extensible</h3>
@@ -72,6 +71,22 @@
             </aside>
         </section>
         <hr>
+        <article id="features">
+            <h1>Features</h1>
+            <h2>Reactive live programming</h2>
+            <p>JIG documents are made of tiles. Like a cell in a spreadsheet, a tile is a node in a calculation graph. You can update the code of each tile anytime, live! All cells that depend on it will update automatically.</p>
+            <h2>UI components</h2>
+            <p>JIG cells can contain data to display, but cells can also contain buttons, images, text inputs, sliders, or clickable charts to create interactive applications.</p>
+            <h2>Data from all your sources</h2>
+            <p>JIG runs on your computer, you can download data from anywhere including local files, non-cors web apis. The beta version does not include connection to databases. But we plan to add this soon.</p>
+            <h2>Local application</h2>
+            <p>JIG runs on your own computer, so you never send your data to us. It's both more reliable and more secure.
+            <h2>Simple charting</h2>
+            While you can create custom visualization in JIG using D3 and other powerful libraries, JIG comes prepackaged with common chart types so that you don't need to reinvent the wheel for simple stuff.
+            <h2>Tables and pivots</h2>
+            <p>We are working on this!</p>
+        </article>
+        <hr>
         <article id="faq">
             <h2>Frequently Asked Questions</h2>
             <p><strong>What language does JIG support?</strong></p>
@@ -79,7 +94,7 @@
             <p><strong>What features are not in the beta, but that I can expect soon?</strong></p>
             <p><ul>
             <li>Database connectivity. Right now, you can only access REST apis, and local files. Support for MySql, PostGreSQL and others is coming soon.</li>
-            <li>Pre-packaged UI components: user inputs / charts / tables</li>
+            <li>Tables / Pivot</li>
             <li>Printing / PDF export.</li>
             </ul></p>
             <p><strong>Can we host JIG apps on a server?</strong></p>
@@ -88,6 +103,7 @@
             <p>Yes, JIG's beta runs as an Electron app.</p>
             <p><strong>More questions? Contact us at <a href="mailto:info@jigdev.com">info@jigdev.com</a></strong></p>
         </article>
+        <hr>
     </main>
     <footer>
         <hr>        
