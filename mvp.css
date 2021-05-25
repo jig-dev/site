@@ -13,7 +13,7 @@
     --color-shadow: #ffffff;
     --color-text: #000;
     --color-text-secondary: #999;
-    --font-family: "Raleway", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --font-family: "Montserrat", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --hover-brightness: 1.2;
     --justify-important: left;
     --justify-normal: left;
@@ -42,7 +42,7 @@
 
 /* Layout */
 article {
-    width: 600px;
+    /*width: 600px;*/
 }
 article aside {
     background: var(--color-secondary-accent);
@@ -206,10 +206,16 @@ h5,
 h6 {
     line-height: var(--line-height);
     font-weight: 900;
+    font-family: "Raleway", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 h1 {
+    font-size: 3rem;
+    margin:0 ;
+}
+h2 {
     font-size: 2rem;
     margin:0 ;
+    font-weight: 700;
 }
 h3 {
     margin-top: 0; 
@@ -227,6 +233,7 @@ ul li {
 p {
     margin: 0.75rem 0;
     padding: 0;
+    font-size: 1.2rem;
 }
 
 pre {
