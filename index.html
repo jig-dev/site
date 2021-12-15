@@ -1,6 +1,6 @@
 <!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: auto">
 <head>
     <link rel="icon" href="./favicon.svg">
     <link rel="stylesheet" href="./mvp.css">
@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Jig: A tool to define, compute, and monitor your metrics</title>
 </head>
-<body>
-    <header>
+<body style="perspective: 1px; overflow: auto; height: 100vh; background-color: transparent">
+    <header style="background-color: white;">
         <nav>
             <div style="display: inline">
                 <!--<span style="font-family: Montserrat; font-weight: 900; font-size: 1.5em; color:#111827; vertical-align: super">;:,</span>-->
@@ -31,25 +31,25 @@
         <br>
         <br>
     </header>
-    <div style="border-width: 1px 0; border-style: solid; border-color: gray; display: flex;justify-content: center;align-items: center; height: 180px;overflow: hidden;">
-        <img style="max-width: 90%; object-fit:contain;  max-width: 90%;object-fit:contain;transform: rotate(-22deg) skew(16deg, 13deg);" src="screenshot.png">
+    <img style="z-index: -1; position:absolute; transform-style: preserve-3d; transform: rotate(-22deg) skew(16deg,13deg) translateX(200px) translateY(-600px) translateZ(-0.5px) scale(1.2);" src="screenshot.png">
+    <div style="height: 250px; border-width: 1px 0; border-style: solid; border-color: gray; background-color: transparent;">
     </div>
-    <main>
-        <div style="margin: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
+    <main style="background-color: white">
+        <div style="padding: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
             <div style="max-width: 400px">
                 <h2>Your data, wherever it is.</h2>
                 <p>Jig runs locally, so it can download data from your internal REST APIs and databases without exposing anything to the internet or requiring costly import procedures.</p>
             </div>
             <div><img style="max-width: 260px" src="data.png"></div>
         </div>
-        <div style="margin: 100px 0 0 0;display: flex; flex-wrap: wrap; flex-direction: row-reverse; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
+        <div style="padding: 100px 0 0 0;display: flex; flex-wrap: wrap; flex-direction: row-reverse; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
             <div style="max-width: 400px">
                 <h2>Any metric. Really.</h2>
                 <p>There is always something special about your business. Whether you want to exclude a region from a metric, or smooth out your numbers over the holiday season, Jig packs in a full data science platform so it does not constrain you in any way.</p>
             </div>
             <div><img style="max-width: 260px" src="code.png"></div>
         </div>
-        <div style="margin: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
+        <div style="padding: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
             <div style="max-width: 400px">
                 <h2>Interactive dashboards.</h2>
                 <p>Jig comes with charts and tables to visualize your data, but also with buttons, filters and inputs of all kinds to bring interactivity to your dashboard.</p>
