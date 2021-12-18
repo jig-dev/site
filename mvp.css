@@ -302,18 +302,17 @@ button:hover {
 }
 
 a b,
-a strong,
 button {
     background-color: var(--color-secondary);
     border: 2px solid var(--color-secondary);
     color: var(--color-bg);
 }
 
-a em,
-a i {
-    border: 2px solid var(--color);
+a strong
+{
+    border: 2px solid var(--color-secondary);
     border-radius: var(--border-radius);
-    color: var(--color);
+    color: var(--color-secondary);
     display: inline-block;
     padding: 0.5rem 1rem;
 }

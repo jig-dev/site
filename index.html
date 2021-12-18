@@ -31,13 +31,13 @@
         <br>
         <br>
     </header>
-    <img style="z-index: -1; position:absolute; transform-style: preserve-3d; transform: rotate(-22deg) skew(16deg,13deg) translateX(100px) translateY(-300px) translateZ(-0.5px) scale(1.2);" src="screenshot.png">
+    <img style="z-index: -1; left: calc(50% - 517px); position:absolute; transform-style: preserve-3d; transform: rotate(-22deg) skew(16deg,13deg) translateX(100px) translateY(-350px) translateZ(-0.5px) scale(1.2);" src="screenshot.png">
     <div style="height: 250px; border-width: 1px 0; border-style: solid; border-color: gray; background-color: transparent;">
     </div>
     <main style="background-color: white">
         <div style="padding: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
             <div style="max-width: 400px">
-                <h2>Your data, wherever it is.</h2>
+                <h2>Your data. On your computer.</h2>
                 <p>Jig runs locally, so it can download data from your internal REST APIs and databases without exposing anything to the internet or requiring costly import procedures.</p>
             </div>
             <div><img style="max-width: 260px" src="data.png"></div>
@@ -51,34 +51,71 @@
         </div>
         <div style="padding: 100px 0 0 0; display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
             <div style="max-width: 400px">
-                <h2>Interactive dashboards.</h2>
+                <h2>Extensible interactive dashboards.</h2>
                 <p>Jig comes with charts and tables to visualize your data, but also with buttons, filters and inputs of all kinds to bring interactivity to your dashboard.</p>
             </div>
             <div><img style="max-width: 260px" src="filters.png"></div>
         </div>
-        <hr>
+    </main>
+    <main style="margin: 50px 0; background-color: #ffd255">
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px 40px; align-content: center; align-items: center; justify-content: center">
+            <div style="font-weight: 900; font-size: 6rem">&lt;!&gt;</div>
+            <div style="max-width: 400px">
+                <h2>Jig is <b>NOT</b> no-code</h2>
+                <p></p>
+            </div>
+            <div style="font-weight: 900; font-size: 6rem"></div>
+        </div>
+    </main>
+    <main>
         <section>
-            <table style="font-variant-numeric: lining-nums;font-weight: 500; font-family: Raleway, Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif">
-                <tr><th></th><th>Free</th><th>Pro (coming...)</th></tr>
-                <tr><td>Connect to REST Apis</td><td>•</td><td>•</td></tr>
-                <tr><td>Connect to MySql</td><td>•</td><td>•</td></tr>
-                <tr><td>Use 3rd party javascript libraries</td><td>•</td><td>•</td></tr>
-                <tr><td>Charts</td><td>•</td><td>•</td></tr>
-                <tr><td>Tables</td><td>•</td><td>•</td></tr>
-                <tr><td>User inputs</td><td>•</td><td>•</td></tr>
-                <tr><td>Versioning / Source control</td><td></td><td>•</td></tr>
-                <tr><td>Intellisense</td><td></td><td>•</td></tr>
-                <tr><td>Dashboard publishing</td><td></td><td>•</td></tr>
-                <tr><td>Price (monthly) per user</td><td></td><td>9€</td></tr>
-                <tr><td>Price (yearly) per user</td><td></td><td>89€</td></tr>
-            </table>
+            <aside style="display: flex; flex-flow: column">
+                <div style="flex-grow: 1">
+                    <h2 style="text-align: center">Free</h2>
+                    <ul>
+                        <li>Connect to REST Apis
+                        <li>Connect to MySql
+                        <li>Use 3rd party javascript libraries
+                        <li>Charts
+                        <li>Tables
+                        <li>User inputs
+                        <li>Versioning / Source control
+                    </ul>
+                </div>
+                <div>
+                    <h2 style="text-align: center">0 €</h2>
+                    <p style="text-align: center; font-size: small">(free forever)</p>
+                </div>
+            </aside>
+            <aside style="display: flex; flex-flow: column">
+                <div style="flex-grow: 1">
+                    <h2 style="text-align: center">Pro</h2>
+                    <p  style="text-align: center; font-size: small">(Coming up)</p>
+                    <ul>
+                        <li>Connect to REST Apis
+                        <li>Connect to MySql
+                        <li>Use 3rd party javascript libraries
+                        <li>Charts
+                        <li>Tables
+                        <li>User inputs
+                        <li>Versioning / Source control
+                        <li>Intellisense
+                        <li>Dashboard publishing
+                    </ul>
+                </div>
+                <div>
+                    <h2 style="text-align: center; font-variant-numeric: lining-nums">89 €</h2>
+                    <p  style="text-align: center; font-size: small">(upgrades for 1 year)</p>
+                </div>
+            </aside>
         </section>
         <hr>
-        <div style="display: flex;justify-content: center;align-items: center">
-        <p style="text-align: center">
+        <div style="display: flex;justify-content: center;align-items: center; flex-flow: column">
             <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.7-beta/JIG-0.0.7-beta.dmg"><b>Download v0.0.7-beta for Mac </b></a>
             <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.7-beta/JIG-0.0.7-beta.msi"><b>Download v0.0.7-beta for Windows</b></a>
-        </p>
+            <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.7-beta/JIG-0.0.7-beta.deb"><b>Download v0.0.7-beta for Linux (.deb)</b></a>
+            <p>If you are interested but can't try it right now:</p>
+            <a><strong>Ask us to email you a reminder</strong></a>
         </div>
     </main>
     <footer>
