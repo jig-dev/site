@@ -82,8 +82,7 @@ section {
 
 section aside {
     background-color: var(--color-bg-aside);
-    border: 1px solid var(--color-bg-secondary);
-    border-radius: var(--border-radius);
+    border-radius: 2px;
     box-shadow: var(--box-shadow) var(--color-shadow);
     margin: 0.5rem;
     padding: 1.25rem;
