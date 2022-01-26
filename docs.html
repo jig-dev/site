@@ -20,35 +20,60 @@
       <span style="font-family: Montserrat; font-weight: 900; font-size: 2em; color:#111827;">JIG</span>
     </div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="docs.html">Getting Started</a></li>
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="docs.html">Docs</a></li>
     </ul>
   </nav>
 </header>
-<main style="background-color: white; text-align: left; max-width: 600px">
-  <h1>Getting Started</h1>
-  <h2>Intro</h2>
-  <p>Jig is a live programming environment that aims at making it easy to compute and monitor business metrics.</p>
-  <p>First, we should highlight that Jig is a lightweight application. It doesn't need a server to run, it doesn't need a database to store data. It's an app that runs on your computer and that does all the processing in memory.</p>
-  <p>We like to think of it as a nimble tool to explore the dark corners of your business data.</p>
-  <h2>How is it different to Excel?</h2>
-  <p></p>
-  <h2>Jig standard library reference</h2>
-  <p></p>
-  <h3>jig.databases</h3>
-  <p>jig.databases.mysql.</p>
-  <p>jig.databases.pg.</p>
-  <h3>jig.charts</h3>
-  <p>jig.charts.chart</p>
-  <p>jig.charts.table</p>
-  <h3>jig.inputs</h3>
-  <p>jig.inputs.button()</p>
-  <p>jig.inputs.textBox()</p>
-  <p>jig.inputs.selectBox()</p>
-  <p>jig.inputs.textArea()</p>
-  <p>jig.inputs.slider()</p>
-  <p>jig.inputs.env()</p>
-  
+<main style="background-color: white; text-align: left; max-width: 1000px">
+  <div style="display: flex; flex-flow: row">
+    <div style="width: 400px;">
+      <div><br></div>
+      <div><a href="#intro">Intro</a></div>
+      <div><a href="#install">Install</a></div>
+    </div>
+    <div>
+      <h1 style="margin: 50px 0">Getting Started</h1>
+      <h2 style="margin: 20px 0">Intro</h2>
+      <p>Jig is lightweight programming environment designed to make it easy to get, transform and display data.</p>
+      <p>It is a standalone application that runs on your computer. It doesn't require a server, or a database. Just download the application and you're ready to go.</p>
+      <p>Here is a brief introduction to Jig.</p>
+      <video style="border-radius: 8px" controls width="100%">
+        <source src="quickdemo.mp4"
+                type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <h2 style="margin: 20px 0">Install</h2>
+      <div>
+        <p>To install Jig, you just need to download the installer for your OS below, and run it.</p>
+        
+        <a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.8-beta/Jig-0.0.8-x64.dmg"><b>Download v0.0.8 for Mac </b></a>
+        <br><a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.8-beta/Jig-0.0.8-x64.msi"><b>Download v0.0.8 for Windows</b></a>
+        <br><a href="https://github.com/jig-dev/jig-releases/releases/download/v0.0.8-beta/Jig-0.0.8-x64.deb"><b>Download v0.0.8 for Linux (.deb)</b></a>
+        <br>
+      </div>
+      <h1 style="margin: 50px 0">How it works</h1>
+      <h2 style="margin: 20px 0">The Observable runtime</h2>
+      <p>Jig runs the open source <a href="https://github.com/observablehq/runtime">Observable</a> runtime. It is a tool that allows you to write Javascript code in reactive cells, very much like you would write formulae in a spreadsheet.</p>
+      <p>It is mostly plain Javascript, but it has some important differences that you can read about here: <a href="https://observablehq.com/@observablehq/observables-not-javascript">Observable's not Javascript</a>.</p>
+      <p>It also ships with a <a href="https://github.com/observablehq/stdlib">standard library</a>, with several helpful functions, which we'll discuss below.</p>
+      <h2 style="margin: 20px 0">Jig Standard Library Reference</h2>
+      <p></p>
+      <h3>jig.databases</h3>
+      <p>jig.databases.mysql.</p>
+      <p>jig.databases.pg.</p>
+      <h3>jig.charts</h3>
+      <p>jig.charts.chart</p>
+      <p>jig.charts.table</p>
+      <h3>jig.inputs</h3>
+      <p>jig.inputs.button()</p>
+      <p>jig.inputs.textBox()</p>
+      <p>jig.inputs.selectBox()</p>
+      <p>jig.inputs.textArea()</p>
+      <p>jig.inputs.slider()</p>
+      <p>jig.inputs.env()</p>
+    </div>
+  </div>
 </main>
 <footer>
   <hr>
