@@ -26,15 +26,19 @@
   </nav>
 </header>
 <main style="background-color: white; text-align: left; max-width: 1000px">
-  <div style="display: flex; flex-flow: row">
-    <div style="width: 400px;">
+  <div style="display: flex; flex-flow: row; gap: 40px">
+    <div style="width: 400px; position: sticky; top: 40px; align-self: flex-start">
       <div><br></div>
       <div><a href="#intro">Intro</a></div>
       <div><a href="#install">Install</a></div>
+      <div><a href="#observable">Observable</a></div>
+      <div><a href="#databases">jig.databases</a></div>
+      <div><a href="#charts">jig.charts</a></div>
+      <div><a href="#inputs">jig.inputs</a></div>
     </div>
     <div>
       <h1 style="margin: 50px 0">Getting Started</h1>
-      <h2 style="margin: 20px 0">Intro</h2>
+      <h2 id="intro" style="padding: 20px 0">Intro</h2>
       <p>Jig is lightweight programming environment designed to make it easy to get, transform and display data.</p>
       <p>It is a standalone application that runs on your computer. It doesn't require a server, or a database. Just download the application and you're ready to go.</p>
       <p>Here is a brief introduction to Jig.</p>
@@ -43,7 +47,7 @@
                 type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
       </video>
-      <h2 style="margin: 20px 0">Install</h2>
+      <h2 id="install" style="padding: 20px 0">Install</h2>
       <div>
         <p>To install Jig, you just need to download the installer for your OS below, and run it.</p>
         
@@ -53,25 +57,150 @@
         <br>
       </div>
       <h1 style="margin: 50px 0">How it works</h1>
-      <h2 style="margin: 20px 0">The Observable runtime</h2>
+      <h2 id="observable" style="padding: 20px 0">The Observable Runtime</h2>
       <p>Jig runs the open source <a href="https://github.com/observablehq/runtime">Observable</a> runtime. It is a tool that allows you to write Javascript code in reactive cells, very much like you would write formulae in a spreadsheet.</p>
       <p>It is mostly plain Javascript, but it has some important differences that you can read about here: <a href="https://observablehq.com/@observablehq/observables-not-javascript">Observable's not Javascript</a>.</p>
-      <p>It also ships with a <a href="https://github.com/observablehq/stdlib">standard library</a>, with several helpful functions, which we'll discuss below.</p>
-      <h2 style="margin: 20px 0">Jig Standard Library Reference</h2>
+      <p>It also ships with a <a href="https://github.com/observablehq/stdlib">standard library</a>, with several helpful functions.</p>
+      <h2 id="databases" style="padding: 40px 0">Jig Database Functions</h2>
       <p></p>
-      <h3>jig.databases</h3>
-      <p>jig.databases.mysql.</p>
-      <p>jig.databases.pg.</p>
-      <h3>jig.charts</h3>
-      <p>jig.charts.chart</p>
-      <p>jig.charts.table</p>
-      <h3>jig.inputs</h3>
-      <p>jig.inputs.button()</p>
-      <p>jig.inputs.textBox()</p>
-      <p>jig.inputs.selectBox()</p>
-      <p>jig.inputs.textArea()</p>
-      <p>jig.inputs.slider()</p>
-      <p>jig.inputs.env()</p>
+      <h3>jig.databases.mysql.query(connection, query)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Executes a MySql query, returns an array of row objects. Uses the <a href="https://www.npmjs.com/package/mysql">mysql</a> node module for the connection object.</p>
+        <pre style="background-color: #F3F4F6">
+    jig.databases.mysql.query({
+      host: 'xxx',
+      user: 'xxx',
+      password: 'xxx',
+      database: 'xxx',
+      port: 'xxx',
+    }, "SELECT * FROM ...")</pre>
+      </div>
+      <h3>jig.databases.pg.query(connection, query)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Executes a MySql query, returns an array of row objects.  Uses the <a href="https://www.npmjs.com/package/pg">pg</a> node module for the connection object.</p>
+        <pre style="background-color: #F3F4F6">
+    jig.databases.pg.query({
+      host: 'xxx',
+      user: 'xxx',
+      password: 'xxx',
+      database: 'xxx',
+      port: 'xxx'
+    }, "SELECT * FROM ...")</pre>
+      </div>
+      <h2 id="charts" style="padding: 40px 0">Jig Charts</h2>
+      <h3>jig.charts.chart(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Draws a chart in the cell</p>
+        <pre style="background-color: #F3F4F6">
+    jig.charts.chart({
+      x: {
+        values: [...],
+        axis: {
+          type: 'number' | 'time' | 'log' | 'category',
+          range: 'auto' | [min, max],
+        }
+      },
+      y: {
+        data: [{
+          name: 'series 1',
+          values: [...],
+          chartType: 'line' | 'bar' | 'scatter',
+          label: 'none' | 'above' | 'below',
+          color: '#ff0000',
+        }, ...],
+        axis: {
+          type: 'number' | 'time' | 'log' | 'category',
+          range: 'auto' | [min, max],
+        }
+      },
+      y2: {
+        // ... similar to y (for right axis)
+      }
+      
+    })</pre>
+      </div>
+      <h3>jig.charts.table(data, options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows an array of objects in a table.</p>
+        <pre style="background-color: #F3F4F6">
+    viewof myTable = jig.charts.table([{ name: 'Alice', age: 25 }, { name: 'Bob', age: 22 }], {
+      columns: ['name', 'age'],
+      selectable: true | false,
+      formats: [{
+        columns: ['age'],
+        heatmap: {
+          range: 'auto' | [min, max] | [min, mid, max]
+        },
+        numberFormat: d3-number-format | function
+      }, ...]
+    })
+    // myTable.selectedRows contains the selected rows.</pre>
+      </div>
+      <h2 id="inputs" style="padding: 40px 0">Jig Inputs</h2>
+      <h3>jig.charts.button(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows a button</p>
+        <pre style="background-color: #F3F4F6">
+    viewof myButton = jig.inputs.button({
+      label: 'Click Me!',
+      value: 'Original Value',
+      onclick: event => { return 'New Value'; }
+    })
+    // myButton will contain 'Original Value' until it is clicked
+    // Then it will hold 'New Value'</pre>
+      </div>
+      <h3>jig.charts.textBox(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows a text box</p>
+        <pre style="background-color: #F3F4F6">
+    viewof myTextBox = jig.inputs.textBox({
+      label: 'Label',
+      placeholder: 'Enter a value',
+      value: 'Original Value',
+    })
+    // myTextBox will contain the content of the textbox</pre>
+      </div>
+      <h3>jig.charts.selectBox(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows a selection box</p>
+        <pre style="background-color: #F3F4F6">
+    viewof mySelectBox = jig.inputs.selectBox({
+      label: 'Label',
+      options: ['Option1','Option2']
+      value: 'Option1',
+    })
+    // mySelectBox will contain the current selected option</pre>
+      </div>
+      <h3>jig.charts.textArea(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows a text area</p>
+        <pre style="background-color: #F3F4F6">
+    viewof myTextArea = jig.inputs.textArea({
+      placeholder: 'Write something here...',
+      value: 'Text text text',
+    })
+    // myTextArea will contain the current text</pre>
+      </div>
+      <h3>jig.charts.slider(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Shows a slider</p>
+        <pre style="background-color: #F3F4F6">
+      viewof mySlider = jig.inputs.slider({
+        label: 'Slide Me!',
+        min: 0,
+        max: 100,
+        step: 5,
+        vertical: false | true,
+        value: 50,
+      })
+      // mySlider will contain the current value</pre>
+      </div>
+      <h3>jig.charts.env(options)</h3>
+      <div style="padding: 0 0 40px 40px">
+        <p>Returns all the environment variables in the system as an object</p>
+        <pre style="background-color: #F3F4F6">
+          jig.inputs.env()</pre>
+      </div>
     </div>
   </div>
 </main>
